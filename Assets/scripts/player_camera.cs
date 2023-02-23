@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class player_camera : MonoBehaviour
 {
-
+    public Light flashlight;
     //cursor lock, pozdeji odemykat na inventar?
     private void Start()
     {
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Confined;
-            
+        flashlight.enabled = false;
+
     }
 
     public float m_sensitivity = 0.5f; //todo nastaveni globalne
@@ -29,4 +30,12 @@ public class player_camera : MonoBehaviour
       transform.parent.localRotation = player_rotation;
 
   }
+    void Update()
+    {
+        // Toggle flashlight on/off when the player presses the "F" key
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            flashlight.enabled = !flashlight.enabled;
+        }
+    }
 }
