@@ -31,4 +31,14 @@ public class uiScript : MonoBehaviour
     {
         SceneManager.LoadScene("MenuScene");
     }
+
+    public void quitGame()
+    {
+        Application.Quit();
+    }
+
+    public void restartBtn()
+    {
+        SceneManager.LoadScene("MenuScene");
+    }
 }

@@ -328,15 +328,15 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 242454810}
   m_LocalRotation: {x: 0.00016706347, y: -0.00027695618, z: 0.004798427, w: 0.9999885}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.3677347, y: 1.386336, z: 1.3677347}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
+  m_LocalScale: {x: 1.2800082, y: 1.2974163, z: 1.2800082}
   m_Children: []
   m_Father: {fileID: 17458184}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0.019000001, y: -0.032, z: 0.55}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 347.7, y: 2.3}
+  m_AnchoredPosition: {x: 333.9, y: -10.1}
   m_SizeDelta: {x: 155.16162, y: 52.44397}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &242454812
@@ -358,7 +358,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: room
+  m_text: ROOM
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4015433e473bb914c8ad04a7f374a262, type: 2}
   m_sharedMaterial: {fileID: -2236409003307996308, guid: 4015433e473bb914c8ad04a7f374a262,
@@ -625,7 +625,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 563245857}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -912,7 +912,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 712417365}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -1188,7 +1188,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1105488933}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
