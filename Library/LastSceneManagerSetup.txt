@@ -1,9 +1,5 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Scenes/WinScene.unity
-=======
-- path: Assets/Scenes/SampleScene.unity
->>>>>>> main
+- path: Assets/Scenes/MenuScene.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

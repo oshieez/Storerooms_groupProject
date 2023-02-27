@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - recipe
+  - Bryan
   layers:
   - Default
   - TransparentFX
@@ -15,8 +16,8 @@ TagManager:
   - 
   - 
   - celing
-  - 
-  - 
+  - ground
+  - player
   - 
   - 
   - 

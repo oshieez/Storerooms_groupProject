@@ -1,9 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class player_movement : MonoBehaviour
 {
+    public float timeleft;
+
+    public int timeRemaining;
+
+    public Text TimerText;
     private CharacterController m_controller;
     public float m_speed = 0.7f;
 
@@ -14,6 +21,9 @@ public class player_movement : MonoBehaviour
     private CharacterController controller;
     private float verticalVelocity = 0f;
     private bool isGrounded = false;
+    public GameObject EnemyObject;
+    public GameObject EnemySpawnpoint;
+    public bool TimeStart = false;
     private void Awake()
     {
         m_controller = GetComponent<CharacterController>();
@@ -66,6 +76,42 @@ public class player_movement : MonoBehaviour
         else
         {
             moveSpeed = 5f; // Reset move speed to default value
+        }
+    }
+
+    private void Update()
+    {
+        if (TimeStart)
+        {
+            timeleft -= Time.deltaTime;
+
+            timeRemaining = Mathf.FloorToInt(timeleft % 60);
+
+            TimerText.text = "Survive for : " + timeRemaining.ToString();
+
+            if (timeRemaining <= 0)
+            {
+                SceneManager.LoadScene("WinScene");
+            }
+        }
+        
+    }
+
+   
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "recipe")
+        {
+            Instantiate(EnemyObject, EnemySpawnpoint.transform.position, EnemySpawnpoint.transform.rotation);
+            Destroy(other.gameObject);
+            TimeStart = true;
+        }
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Bryan")
+        {
+            SceneManager.LoadScene("LoseScene");
         }
     }
 }
